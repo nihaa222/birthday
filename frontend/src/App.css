@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+   height: 100vh;
+    background-color: rgba(255, 208, 0, 0.158);
+}
+
+
+
+
+/* .envelope{
+  margin-top: 20px;
+  height: 150px;
+  width: 250px;
+  background-color: gainsboro;
+  position: relative;
+z-index: 10;
+
+} */
+
+
+
+.envelope::before {
+  content: "";
+  width: 0; /* Needed for triangle shape */
+  height: 0; /* Needed for triangle shape */
+  border-left: 125px solid transparent; /* Half the width of the envelope */
+  border-right: 125px solid transparent; /* Half the width of the envelope */
+  border-bottom: 95px solid gainsboro; /* Triangle height and color */
+  top: -95px;
+  z-index: -95;
+  position: absolute;
+  /* top: -150px; */
+ 
+ 
+}
+.envelope::after {
+  content: "";
+  width: 0; 
+  height: 0;
+  z-index: 50; 
+  border-left: 125px solid gainsboro; 
+  border-right: 125px solid gainsboro; 
+  border-top: 80px solid white; 
+
+  position: absolute;
+
+ 
+ 
+}
+
+.top{
+    position: relative;
+    z-index: 10;
+}
+
+.bag{ 
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: 10;
+  border-left: 125px solid gainsboro;
+  border-right: 125px solid gainsboro; 
+  border-top: 80px solid white; 
+}
+
+.cover{
+z-index: 50;
+ width: 0; 
+  height: 0; 
+  border-left: 125px solid transparent; 
+  border-right: 125px solid transparent; 
+  border-bottom: 95px solid gainsboro; 
+  top: 50px;
+  z-index: ;
+  position: absolute;
+}
+
+
