@@ -26,7 +26,7 @@ function App() {
       ...prev,
       identity: uniqueId
     }));
-    const url = `http://localhost:3000/${uniqueId}`;
+    const url = `http://13.49.244.5:3000/${uniqueId}`;
     setNewUrl(url);
   }, []);
 
