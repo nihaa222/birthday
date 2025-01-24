@@ -9,7 +9,12 @@ dotenv.config()
 const app = express();
 app.use(express.json());
 const port = 3000;
-app.use(cors());
+const corsOptions = {
+    origin: 'http://13.49.244.5', // Replace with your frontend's public IP
+    methods: ['GET', 'POST'], // Allowed methods
+    allowedHeaders: ['Content-Type'], // Allowed headers
+};
+app.use(cors(corsOptions));
 
 mongoose.connect(process.env.MONGO_URI, {
 
