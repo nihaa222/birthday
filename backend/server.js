@@ -10,10 +10,10 @@ const app = express();
 app.use(express.json());
 const port = 3000;
 const corsOptions = {
-    origin: 'http://13.49.244.5', // Replace with your frontend's public IP
+    origin: ['http://13.49.244.5', 'http://localhost:3000', 'http://frontend:3000'], // Allow frontend URL and localhost (if testing locally)
     methods: ['GET', 'POST'], // Allowed methods
     allowedHeaders: ['Content-Type'], // Allowed headers
-};
+  };
 app.use(cors(corsOptions));
 
 mongoose.connect(process.env.MONGO_URI, {
