@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 const port = 3000;
 const corsOptions = {
-    origin: ['http://13.49.244.5', 'http://localhost:3000', 'http://frontend:3000'], // Allow frontend URL and localhost (if testing locally)
+    origin: ['http://13.49.244.5', 'http://localhost:3000'], // Allow frontend URL and localhost (if testing locally)
     methods: ['GET', 'POST'], // Allowed methods
     allowedHeaders: ['Content-Type'], // Allowed headers
   };
@@ -27,6 +27,6 @@ mongoose.connect(process.env.MONGO_URI, {
 
 app.use("/create", createRoute)
 app.use("/", getageRoute)
-app.listen(port, () => {
+app.listen(port, "0.0.0.0", () => {
     console.log(`Server is running on port ${port}`);
 });
