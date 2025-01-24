@@ -83,7 +83,7 @@ function App() {
     e.preventDefault();
     console.log(formInputs);
     const postData = async () => {
-      const res = await fetch("http://13.49.244.5:3000/create", {
+      const res = await fetch("http://backend:3000/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
