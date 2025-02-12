@@ -10,8 +10,8 @@ const app = express();
 app.use(express.json());
 const port = 3000;
 const corsOptions = {
-    origin: ['http://13.61.10.35:3001/'], // Allow frontend URL and localhost (if testing locally)
-    methods: ['GET', 'POST'], // Allowed methods
+    origin: ['http://13.61.10.35:3001'], // Allow frontend URL and localhost (if testing locally)
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allowed methods
     allowedHeaders: ['Content-Type'], // Allowed headers
   };
 app.use(cors(corsOptions));
