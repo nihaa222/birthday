@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 const port = 3000;
 const corsOptions = {
-    origin: ['http://13.49.244.5:3001'], // Allow frontend URL and localhost (if testing locally)
+    origin: ['http://13.61.10.35:3002/'], // Allow frontend URL and localhost (if testing locally)
     methods: ['GET', 'POST'], // Allowed methods
     allowedHeaders: ['Content-Type'], // Allowed headers
   };
