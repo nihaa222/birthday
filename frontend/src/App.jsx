@@ -132,6 +132,10 @@ function App() {
               <div className=' h-32  w-72 bg-blue-300 rotate-6'></div>
               <p className=' top-4 pl-3 absolute b0ttom-5 text-7xl  font-bold text-black'>CARD !</p>
             </div>
+            <div className='relative'>
+              <div className=' h-32  w-72 bg-blue-300 rotate-6'></div>
+              <p className=' top-4 pl-3 absolute b0ttom-5 text-7xl  font-bold text-black'>CARD !</p>
+            </div>
           </div>
 
           <div className='bg-white mb-10 sm:w-1/2 px-12 rounded-md mt-5 mx-6 py-12'>
